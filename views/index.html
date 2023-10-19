@@ -4,10 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
     <title>Home</title>
 </head>
 
 <body>
+    <div class="flex justify-center items-center h-screen" hx-post="/clicked" hx-swap="outerHTML">
+        <div class="flex items-center text-4xl font-bold shadow-lg py-3 px-5 rounded-full">
+            <h1 class="">This page was made with-</h1>
+            <h3 class="text-sky-500 hover:scale-105 ease-out duration-500">Tailwind</h3>.
+            <h3 class="text-blue-500 hover:scale-105 ease-out duration-500">CSS</h3>.
+            <h3 class="text-blue-800 hover:scale-105 ease-out duration-500">HTMX</h3>.
+            <h3 class="text-[#29beb0] hover:scale-105 ease-out duration-500">GO</h3>
+        </div>
+    </div>
+    
 
 </body>
 
